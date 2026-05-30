@@ -1,7 +1,5 @@
-# ejercicio-alumno
+# Ejercicio Haskell Chef Cleaver Nahuel
 
 ## Integrantes
 
-- integrante1 (usuario github)
-- integrante2 (usuario github)
-...
+- Cleaver Nahuel (ncleaver02)
