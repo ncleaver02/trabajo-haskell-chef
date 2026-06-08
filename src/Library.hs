@@ -125,3 +125,32 @@ mejorParticipante :: Participante -> Participante -> Participante
 mejorParticipante unParticipante otroParticipante
     | esMejorQue (cocinar unParticipante) (cocinar otroParticipante) = unParticipante
     | otherwise = otroParticipante
+
+-- Parte D--------------------------------------------------------------------------------------------------------------------------------
+
+-- platinum :: Plato
+-- platinum = Plato {
+-- dificultad = 10,
+-- componentes = [(componente "ingrediente 1" 1), (componente "ingrediente 2" 2), (componente "ingrediente 3" 3), ..] 
+
+
+-- Trucos: endulzar: Funciona. Esto porque la funcion agrega el azucar como primer componente de la lista asi que haskell no necesita compilar la lista entera.
+
+-- Salar: Funciona. idem endulzar para sal.
+
+-- DarSabor: Funciona. Agrega al principio de la lista los 2 componentes, asi que funciona por la misma razon que funciona endulzar y salar.
+
+-- DuplicarPorcion: Funciona. Esto es debido a la naturaleza perezosa de Haskell, el cual no multiplica todas las porciones en la lista sino que agrega un multiplicador que va a tener efecto si se usa esta funcion con otra mas.
+
+-- Simplificar: No funciona. Esto porque en la parte de revisar la cantidad de componentes se uso length, por lo que tendria que revisar la cantidad total, que es infinita, y no va a poder.
+
+-- EsVegano: No funciona. Esto se debe a la funcion tiene, que usa any, y a como esta hecho el platinum, ya que este no contiene nada de lo que busca la funcion, seguira por siempre.
+
+-- EsSinTacc: No funciona. Idem esVegano.
+
+-- EsComplejo: No funciona. Misma razon que no funciona simplificar, por el cantidadComponentes y el length.
+
+-- NoAptoHipertension: No funciona. Porque con la funcion filter va a intentar recorrer toda la lista para encontrar sales, por lo tanto no sera posible debido a que nunca terminara de buscar.
+
+-- esMejorQue: No funciona. Esto es debido a que aunque si puede comparar dificultades, no va a poder comparar los pesos totales, ya que usando el sum se recorre toda la lista para sumar los pesos, lo cual nunca va a terminar de hacer.
+
